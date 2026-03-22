@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -59,6 +58,16 @@ export function ProjectSettingsForm({ settings, onChange }: Props) {
               onChange={(e) => onChange({ ...settings, frameDepth: parseFloat(e.target.value) || 0 })}
             />
           </div>
+        </div>
+        <div>
+          <Label htmlFor="faceframe-overhang">Face Frame Overhang</Label>
+          <Input
+            id="faceframe-overhang"
+            type="number"
+            step="0.01"
+            value={settings.faceframeOverhang}
+            onChange={(e) => onChange({ ...settings, faceframeOverhang: parseFloat(e.target.value) || 0.25 })}
+          />
         </div>
       </div>
     </div>

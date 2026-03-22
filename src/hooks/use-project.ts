@@ -8,6 +8,7 @@ export function useProject() {
     name: '',
     materialThickness: 0.75,
     frameDepth: 0.75,
+    faceframeOverhang: 0.25,
   });
 
   // Load on mount

@@ -24,8 +24,9 @@ export function formatInch(decimal: number): string {
 export function generateParts(cabinet: Cabinet, settings: ProjectSettings): CutPart[] {
   const THICK = settings.materialThickness;
   const FRAME = settings.frameDepth;
+  const OVERHANG = settings.faceframeOverhang || 0.25;
   const sideD = cabinet.depth - FRAME;
-  const backW = cabinet.width - (2 * THICK);
+  const backW = cabinet.width - (2 * THICK) - (2 * OVERHANG);
   const botD = sideD - THICK - SCRIBE;
   const parts: CutPart[] = [];
 

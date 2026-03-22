@@ -194,7 +194,7 @@ export default function Index() {
           ))}
 
           {/* Print Cut List */}
-          <div className="hidden print-only cutlist-container page-break-before">
+          <div className="hidden print-only cutlist-container">
             <CutList cabinets={cabinets} settings={settings} />
           </div>
         </>

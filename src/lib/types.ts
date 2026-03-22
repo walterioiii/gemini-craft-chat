@@ -12,6 +12,7 @@ export interface ProjectSettings {
   name: string;
   materialThickness: number;
   frameDepth: number;
+  faceframeOverhang: number;
 }
 
 export interface CutPart {

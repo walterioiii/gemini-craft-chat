@@ -147,11 +147,19 @@
   .sheet-container {
     page-break-after: always !important;
     break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .sheet-container canvas {
+    width: 3.5in !important;
+    height: 7in !important;
+    max-width: 100% !important;
   }
 
   .cutlist-container {
-    page-break-before: always;
-    break-before: page;
     margin-top: 1in;
   }
 
